@@ -1,19 +1,14 @@
 #Imports
-
-from flask import Flask
-from requests import get
-
-
+import meth
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
 
-
-
 def index():
-    ip =get('https://api.ipify.org?format=js').text
-    return "Public IP is " + ip
+
+   return render_template('temp.html')
 
 
 if __name__ == '__main__':
